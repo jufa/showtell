@@ -103,10 +103,17 @@ var cnsconline = (function($){
 			cnsconline.setupContentsSlide();
 			cnsconline.skiptoSlide(0);	
 		},
-		scrollUp: function(){
-			$('body,html').animate({
-				scrollTop: $scrollTarget.offset().top
-			}, 300);
+		scrollUp: function(callback){
+			callback = callback || null;
+			var scrolledPx = Math.max($('html').scrollTop(), $('body').scrollTop());
+			console.log( scrolledPx + ",   " + $scrollTarget.offset().top);
+			if( parseInt(scrolledPx) > parseInt($scrollTarget.offset().top)) {
+				$('body,html').animate({
+					scrollTop: $scrollTarget.offset().top
+				}, 200, callback);
+			} else {
+				if (callback != null) callback();
+			}
 		},
 		transitionComplete: function(){
 			console.log("trans");
@@ -114,7 +121,6 @@ var cnsconline = (function($){
 			$slideList.eq(currentSlide).hide(); 
 			currentSlide = targetSlide;
 			$slideList.eq(targetSlide).css('position','relative');
-			cnsconline.scrollUp();
 			animating = 0; 
 		},
 		setupContentsSlide: function() {
@@ -159,6 +165,16 @@ var cnsconline = (function($){
 			cnsconline.updateProgressBar(targetSlide);
 			animating = 0;
 		},
+		animationNextSlide:function(){
+			$slideList.eq(targetSlide).delay(xSpeed).animate({left: '0px'}, xSpeed, cnsconline.transitionComplete);
+			$slideList.eq(currentSlide).delay(xSpeed).animate({left: -offScreenX+'px'}, xSpeed);
+		},
+		animationPrevSlide:function(){
+			$slideList.eq(targetSlide).delay(xSpeed).animate({left: '0px'}, xSpeed, cnsconline.transitionComplete);
+			$slideList.eq(currentSlide).delay(xSpeed).animate({left: offScreenX+'px'}, xSpeed);
+		},
+		
+				
 		gotoSlide: function(tgtSlide) {
 			if (animating==1) return;
 			animating = 1;
@@ -170,14 +186,12 @@ var cnsconline = (function($){
 			$slideList.eq(targetSlide).css('position','absolute');
 			if(currentSlide < targetSlide){
 				//$slideList.eq(targetSlide).addClass('.stageRight');
-				$slideList.eq(targetSlide).animate({left: '0px'}, xSpeed, cnsconline.transitionComplete);
-				$slideList.eq(currentSlide).animate({left: -offScreenX+'px'}, xSpeed);
+				cnsconline.scrollUp(cnsconline.animationNextSlide);
 			} else if (currentSlide == targetSlide){
 				$slideList.eq(currentSlide).css('left', '0px');
 				animating=0;
 			} else {
-				$slideList.eq(targetSlide).animate({left: '0px'}, xSpeed, cnsconline.transitionComplete);
-				$slideList.eq(currentSlide).animate({left: offScreenX+'px'}, xSpeed);
+				cnsconline.scrollUp(cnsconline.animationPrevSlide);	
 			}
 			cnsconline.updateProgressBar(targetSlide);
 
