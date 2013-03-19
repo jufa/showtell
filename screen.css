@@ -26,7 +26,7 @@ section {
 
 
 
-#container {
+#wrapper #container {
 	padding: 0;
 	margin: 0;
 	min-height: 500px;
@@ -43,7 +43,7 @@ section {
  *
  *
  */
-#navigation {
+#wrapper #navigation {
 	position:relative;
 	height:70px;
 	background-color:#fff;
@@ -55,20 +55,20 @@ section {
 	font-weight:bold;
 }
 
-#navigation a {
+#wrapper #navigation a {
 	color:#666;
 	text-decoration:none;
 	}
-#navigation p {
+#wrapper #navigation p {
 	display:inline;
 	}
-#relative{
+#wrapper #relative{
 	padding:0 2% 0 0;
 	float:right;
 	text-align:right;
 	width:45%;
 }
-#relative img{
+#wrapper #relative img{
 	height:60px;
 	width:60px;
 	vertical-align:middle;
@@ -76,34 +76,34 @@ section {
 	border:0;
 }
 
-#relative ul{
+#wrapper #relative ul{
 	margin:0;
 	padding:0 8px;
 	list-style-type:none;
 }
-#relative li{
+#wrapper #relative li{
 	margin:0;
 	display:inline;
 }
 
-#absolute {
+#wrapper #absolute {
 	float: left;
 	width: 45%;
 	padding-left:2%;
 }
-#absolute img {
+#wrapper #absolute img {
 	height:60px;
 	width:60px;
 	vertical-align:middle;
 	margin: 0 6px;
 	border:0;
 	}
-#absolute ul{
+#wrapper #absolute ul{
 	list-style-type:none;
 	margin:0;
 	padding:0;
 }
-#absolute li{
+#wrapper #absolute li{
 	display:inline;
 	margin:0;
 	padding:0;
@@ -115,7 +115,7 @@ section {
  *
  *
  */
-#fipsbar {
+#wrapper #fipsbar {
 	width:100%;
 	height:40px;
 	background-color:#000;
@@ -126,13 +126,13 @@ section {
 	overflow:hidden;
 	}
 
-#fipsbar  #wordmark{
+#wrapper   #wordmark{
 	float: right;
 	text-align:right;
 	padding-right:10px;
 	}
 	
-#fipsbar #department{
+#wrapper  #department{
 	float:left;
 	padding-left:10px;
 }
@@ -144,10 +144,10 @@ section {
  *
  */
 
- .toc  {
+#wrapper  .toc  {
 }
 
-.toc a {
+#wrapper  .toc a {
 	text-decoration:none;
 	font-size:18px;
 	padding:0 0 14px 40px;
@@ -156,10 +156,10 @@ section {
 	float:left;
 	color:#666;
 	}
-.toc a:hover {
+#wrapper .toc a:hover {
 	color:#000;
 	}
-.slide {
+#wrapper .slide {
 	font-family:'Open Sans',Arial,sans-serif;
 	font-weight:normal;
 	font-size:20px;
@@ -168,73 +168,73 @@ section {
 	padding:0;
 	}
 	
-.slide h1,h2,h3 {
+#wrapper .slide h1,h2,h3 {
 	font-weight:normal;
 	}
-.slide h2 {
+#wrapper .slide h2 {
 	margin-top: 10px;
 
 }
-.slide h3 {
+#wrapper .slide h3 {
 	font-size:36px;
 }
 
-.slide p {
+#wrapper .slide p {
 	padding:14px;
 	line-height:1.5em;
 	}
- .stage-right{
+#wrapper .stage-right{
 	left:800px;
 	}
- .stage-left{
+#wrapper  .stage-left{
 	left:-800px;
 	}
-.slide .span-16{
+#wrapper .slide .span-16{
 	width:16%;
 	float:left;
 	min-width:160px;
 	}
-.slide .span-26{
+#wrapper .slide .span-26{
 	width:33%;
 	float:left;
 	min-width:330px;
 	}
-.slide .span-36{
+#wrapper .slide .span-36{
 	width:50%;
 	float:left;
 	min-width:400px;
 	}
-.slide .span-46{
+#wrapper .slide .span-46{
 	width:66%;
 	float:left;
 	background-color: transparent;
 	}
-.slide .span-56{
+#wrapper .slide .span-56{
 	width:77%;
 	float:left;
 	}
-.slide .span-66{
+#wrapper .slide .span-66{
 	width:99%;
 	float:left;
 	}
-.slide .span-14{
+#wrapper .slide .span-14{
 	width:25%;
 	float:left;
 	min-width:250px;
 	}
-.slide .span-24{
+#wrapper .slide .span-24{
 	width:50%;
 	float:left;
 	}
-.slide .span-34{
+#wrapper .slide .span-34{
 	width:75%;
 	float:left;
 	}
-.slide .span-44{
+#wrapper .slide .span-44{
 	width:99%;
 	float:left;
 	}
-.slide .span-100{
+#wrapper .slide .span-100{
 	width:100%;
 	float:left;
 	}
@@ -247,65 +247,65 @@ section {
  *
  *
  */	
-.tag {
+#wrapper .tag {
 	margin:0 20px 0 0;
 	padding:20px 0 0 0;
 	height: 100px;
 	width: 100%;
 	}
-.tag img {
+#wrapper .tag img {
 	float:left;
 	height:80px;
 	width:50px;
 	background-color:#33f;
 	margin-right:20px;
 }
-.tag h2{
+#wrapper .tag h2{
 	font-size:12px;
 	padding:0;
 	margin:0 0 8px 0;
 	line-height:1em;
 }
 
-.tag h3{
+#wrapper .tag h3{
 	font-size:36px;
 	padding:0;
 	margin:0;
 	line-height:1em;
 }
 
-#progress {
+#wrapper .progress {
 	height: 8px;
 	background-color:#ccc;
 	margin-top:1px;
 	}
 	
 /* to prevent any container height collapses:*/
-.clear-fix{
+#wrapper .clear-fix{
 	clear:both;
 	}
 	
 @media all and (max-width:480px) {
-	.slide h2 {
+	#wrapper .slide h2 {
 		
 	}
-	.slide h3 {
+	#wrapper .slide h3 {
 		font-size:22px; 
 	}
-	#navigation {
+	#wrapper #navigation {
 		height:200px;
 	}
-	#navigation p {
+	#wrapper #navigation p {
 		display:none;
 		}
-	#relative {
+	#wrapper #relative {
 		width:100%;
 		margin: 10px auto 20px auto;
 		text-align:center;
 		padding:0;
 		
 	}
-	#absolute {
+	#wrapper #absolute {
 		width:100%;
 		margin: 0 auto;
 		float:none;
@@ -313,47 +313,47 @@ section {
 		padding:0;
 	}
 	
-	.slide .span-16{
+	#wrapper .slide .span-16{
 		width:99%;
 		float:left;
 		}
-	.slide .span-26{
+	#wrapper .slide .span-26{
 		width:99%;
 		float:left;
 		}
-	.slide .span-36{
+	#wrapper .slide .span-36{
 		width:99%;
 		float:left;
 		}
-	.slide .span-46{
+	#wrapper .slide .span-46{
 		width:99%;
 		float:left;
 		}
-	.slide .span-56{
+	#wrapper .slide .span-56{
 		width:99%;
 		float:left;
 		}
-	.slide .span-66{
+	#wrapper .slide .span-66{
 		width:99%;
 		float:left;
 		}
-	.slide .span-14{
+	#wrapper .slide .span-14{
 		width:99%;
 		float:left;
 		}
-	.slide .span-24{
+	#wrapper .slide .span-24{
 		width:99%;
 		float:left;
 		}
-	.slide .span-34{
+	#wrapper .slide .span-34{
 		width:99%;
 		float:left;
 		}
-	.slide .span-44{
+	#wrapper .slide .span-44{
 		width:99%;
 		float:left;
 		}
-	.slide .span-100{
+	#wrapper .slide .span-100{
 		width:99%;
 		float:left;
 		}

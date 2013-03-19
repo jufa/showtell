@@ -50,7 +50,7 @@ var cnsconline = (function($){
 			
 			$('#wrapper').css('max-width', $(window).width() );
 			$('#wrapper').css({'max-height': $(window).height() });
-			$('#container').css({'min-height': $(window).height() - $('#navigation').height() - $('#fipsbar').height() - $('#progress').height() });
+			$('#container').css({'min-height': $(window).height() - $('#navigation').height() - $('#fipsbar').height() - $('.progress').height() });
 			//relayout offstage slides to a revised offsteage value:
 			offScreenX = $(window).width();
 			//want to scroll up to fips instead of container top:
@@ -78,7 +78,7 @@ var cnsconline = (function($){
 			e.preventDefault();
 		},
 		updateProgressBar: function(target){
-			var $ref = $('#progress');
+			var $ref = $('.progress');
 			var w = 100.0 / parseFloat(slideCount);
 			console.log('pct:'+w);
 			$ref.css('width',parseInt(w)+'%');

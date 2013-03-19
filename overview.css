@@ -6,14 +6,14 @@
  *
  *
  */
-#navigation {
+#wrapper #navigation {
 
 }
 
-.slide h2 {
+#wrapper .slide h2 {
 
 }
-.slide h3 {
+#wrapper .slide h3 {
 
 }
 
@@ -25,18 +25,18 @@
  *
  */	
 
-.tag img {
+#wrapper .tag img {
 	background-color:#03c;
 	
 }
-.tag h2{
+#wrapper .tag h2{
 	color:#000;
 }
 
-.tag h3{
+#wrapper .tag h3{
 	color:#069;
 }
 
-#progress {
+#wrapper .progress {
 	background-color:#069;
 	}
