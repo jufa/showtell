@@ -1,0 +1,361 @@
+/*
+ *
+ * bottom navigation next/previous, home 
+ *
+ *
+ */
+body {
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	background-color:#eee;
+	font-family: Arial, sans_serif;
+	-ms-interpolation-mode: bicubic;
+}
+section {	
+}
+#wrapper {
+	margin: 0 auto;
+	max-width:1024px;
+	padding: 0;
+	min-height:500px;
+	position:relative;
+	box-shadow: 0 25px 25px #999;
+}
+
+
+
+#container {
+	padding: 0;
+	margin: 0;
+	min-height: 500px;
+	max-width:100%;
+	background-color:#fff;
+	position:relative;
+	overflow-x:hidden;
+	overflow-y:visible;
+}
+
+/*
+ *
+ * bottom navigation next/previous, home 
+ *
+ *
+ */
+#navigation {
+	position:relative;
+	height:70px;
+	background-color:#fff;
+	width:100%;
+	color:#666;
+	padding:0;
+	margin:0;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#navigation a {
+	color:#666;
+	text-decoration:none;
+	}
+#navigation p {
+	display:inline;
+	}
+#relative{
+	padding:0 2% 0 0;
+	float:right;
+	text-align:right;
+	width:45%;
+}
+#relative img{
+	height:60px;
+	width:60px;
+	vertical-align:middle;
+	margin: 0 6px;
+	border:0;
+}
+
+#relative ul{
+	margin:0;
+	padding:0 8px;
+	list-style-type:none;
+}
+#relative li{
+	margin:0;
+	display:inline;
+}
+
+#absolute {
+	float: left;
+	width: 45%;
+	padding-left:2%;
+}
+#absolute img {
+	height:60px;
+	width:60px;
+	vertical-align:middle;
+	margin: 0 6px;
+	border:0;
+	}
+#absolute ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#absolute li{
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+/*
+ *
+ * FIPS top bar
+ *
+ *
+ */
+#fipsbar {
+	width:100%;
+	height:40px;
+	background-color:#000;
+	color:#fff;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	}
+
+#fipsbar  #wordmark{
+	float: right;
+	text-align:right;
+	padding-right:10px;
+	}
+	
+#fipsbar #department{
+	float:left;
+	padding-left:10px;
+}
+
+/*
+ *
+ * Table of Contents page
+ *
+ *
+ */
+
+ .toc  {
+}
+
+.toc a {
+	text-decoration:none;
+	font-size:18px;
+	padding:0 0 14px 40px;
+	width:290px;
+	display:block;
+	float:left;
+	color:#666;
+	}
+.toc a:hover {
+	color:#000;
+	}
+.slide {
+	font-family:'Open Sans',Arial,sans-serif;
+	font-weight:normal;
+	font-size:20px;
+	width:100%;
+	margin:0;
+	padding:0;
+	}
+	
+.slide h1,h2,h3 {
+	font-weight:normal;
+	}
+.slide h2 {
+	margin-top: 10px;
+
+}
+.slide h3 {
+	font-size:36px;
+}
+
+.slide p {
+	padding:14px;
+	line-height:1.5em;
+	}
+ .stage-right{
+	left:800px;
+	}
+ .stage-left{
+	left:-800px;
+	}
+.slide .span-16{
+	width:16%;
+	float:left;
+	min-width:160px;
+	}
+.slide .span-26{
+	width:33%;
+	float:left;
+	min-width:330px;
+	}
+.slide .span-36{
+	width:50%;
+	float:left;
+	min-width:400px;
+	}
+.slide .span-46{
+	width:66%;
+	float:left;
+	background-color: transparent;
+	}
+.slide .span-56{
+	width:77%;
+	float:left;
+	}
+.slide .span-66{
+	width:99%;
+	float:left;
+	}
+.slide .span-14{
+	width:25%;
+	float:left;
+	min-width:250px;
+	}
+.slide .span-24{
+	width:50%;
+	float:left;
+	}
+.slide .span-34{
+	width:75%;
+	float:left;
+	}
+.slide .span-44{
+	width:99%;
+	float:left;
+	}
+.slide .span-100{
+	width:100%;
+	float:left;
+	}
+	
+	
+	
+/*
+ *
+ * section title, aka tag
+ *
+ *
+ */	
+.tag {
+	margin:0 20px 0 0;
+	padding:20px 0 0 0;
+	height: 100px;
+	width: 100%;
+	}
+.tag img {
+	float:left;
+	height:80px;
+	width:50px;
+	background-color:#33f;
+	margin-right:20px;
+}
+.tag h2{
+	font-size:12px;
+	padding:0;
+	margin:0 0 8px 0;
+	line-height:1em;
+}
+
+.tag h3{
+	font-size:36px;
+	padding:0;
+	margin:0;
+	line-height:1em;
+}
+
+#progress {
+	height: 8px;
+	background-color:#ccc;
+	margin-top:1px;
+	}
+	
+/* to prevent any container height collapses:*/
+.clear-fix{
+	clear:both;
+	}
+	
+@media all and (max-width:480px) {
+	.slide h2 {
+		
+	}
+	.slide h3 {
+		font-size:22px; 
+	}
+	#navigation {
+		height:200px;
+	}
+	#navigation p {
+		display:none;
+		}
+	#relative {
+		width:100%;
+		margin: 10px auto 20px auto;
+		text-align:center;
+		padding:0;
+		
+	}
+	#absolute {
+		width:100%;
+		margin: 0 auto;
+		float:none;
+		text-align:center;
+		padding:0;
+	}
+	
+	.slide .span-16{
+		width:99%;
+		float:left;
+		}
+	.slide .span-26{
+		width:99%;
+		float:left;
+		}
+	.slide .span-36{
+		width:99%;
+		float:left;
+		}
+	.slide .span-46{
+		width:99%;
+		float:left;
+		}
+	.slide .span-56{
+		width:99%;
+		float:left;
+		}
+	.slide .span-66{
+		width:99%;
+		float:left;
+		}
+	.slide .span-14{
+		width:99%;
+		float:left;
+		}
+	.slide .span-24{
+		width:99%;
+		float:left;
+		}
+	.slide .span-34{
+		width:99%;
+		float:left;
+		}
+	.slide .span-44{
+		width:99%;
+		float:left;
+		}
+	.slide .span-100{
+		width:99%;
+		float:left;
+		}
+
+}

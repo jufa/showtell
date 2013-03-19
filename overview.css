@@ -1,0 +1,42 @@
+
+
+/*
+ *
+ * bottom navigation next/previous, home 
+ *
+ *
+ */
+#navigation {
+
+}
+
+.slide h2 {
+
+}
+.slide h3 {
+
+}
+
+
+/*
+ *
+ * section title, aka tag
+ *
+ *
+ */	
+
+.tag img {
+	background-color:#03c;
+	
+}
+.tag h2{
+	color:#000;
+}
+
+.tag h3{
+	color:#069;
+}
+
+#progress {
+	background-color:#069;
+	}
