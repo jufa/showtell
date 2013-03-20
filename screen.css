@@ -45,7 +45,7 @@ section {
  */
 #wrapper #navigation {
 	position:relative;
-	height:70px;
+	height:80px;
 	background-color:#fff;
 	width:100%;
 	color:#666;
@@ -54,60 +54,69 @@ section {
 	font-size:12px;
 	font-weight:bold;
 }
-
 #wrapper #navigation a {
 	color:#666;
 	text-decoration:none;
+	display:block;
+	padding:0;
+	margin:0;
+	float:left;
 	}
+
 #wrapper #navigation p {
-	display:inline;
+	line-height:1.25em;
+	margin:4px 0 0 0;
+	padding:0;
 	}
+
 #wrapper #relative{
 	padding:0 2% 0 0;
 	float:right;
-	text-align:right;
 	width:45%;
 }
-#wrapper #relative img{
-	height:60px;
-	width:60px;
-	vertical-align:middle;
-	margin: 0 6px;
-	border:0;
+#wrapper #absolute {
+	padding:0 0 0 2%;
+	float: left;
+	width:45%;
 }
 
-#wrapper #relative ul{
+#wrapper #navigation ul{
+	display:block;
+	float:right;
+	height:80px;
+	text-align:center;
 	margin:0;
 	padding:0 8px;
 	list-style-type:none;
 }
-#wrapper #relative li{
-	margin:0;
-	display:inline;
+#wrapper #relative ul{
+	float:right;
+}
+#wrapper #absolute ul{
+	float:left;
 }
 
-#wrapper #absolute {
-	float: left;
-	width: 45%;
-	padding-left:2%;
+
+#wrapper #navigation li{
+	margin:0;
+	padding:0;
+	display:inline;
+	line-height:1.25em;
 }
-#wrapper #absolute img {
+
+#wrapper #navigation img{
+	display:block;
 	height:60px;
 	width:60px;
 	vertical-align:middle;
 	margin: 0 6px;
+	padding:0;
 	border:0;
-	}
-#wrapper #absolute ul{
-	list-style-type:none;
-	margin:0;
-	padding:0;
 }
-#wrapper #absolute li{
-	display:inline;
-	margin:0;
-	padding:0;
-}
+
+
+
+
 
 /*
  *
@@ -286,32 +295,16 @@ section {
 	}
 	
 @media all and (max-width:480px) {
+	#wrapper #navigation {
+		height:160px;
+	}
 	#wrapper .slide h2 {
 		
 	}
 	#wrapper .slide h3 {
 		font-size:22px; 
 	}
-	#wrapper #navigation {
-		height:200px;
-	}
-	#wrapper #navigation p {
-		display:none;
-		}
-	#wrapper #relative {
-		width:100%;
-		margin: 10px auto 20px auto;
-		text-align:center;
-		padding:0;
-		
-	}
-	#wrapper #absolute {
-		width:100%;
-		margin: 0 auto;
-		float:none;
-		text-align:center;
-		padding:0;
-	}
+
 	
 	#wrapper .slide .span-16{
 		width:99%;

@@ -9,17 +9,14 @@
 		<script type="text/javascript" src="modernizr.custom.js"></script>
 	</head>
 	<body>	
-		<div id="wrapper">
+
+	<h1>Slider Demo</h1>
+	<div id="wrapper">
 		<!--progress bar-->
 			
-			<div id="fipsbar">
-				<div id="department"><img src="./images/fips.png" alt="CNSC|CCSN"/></div>
-				<div id="wordmark"><img src="./images/wordmark.png" alt="Canada"/></div>
-			</div><!--fipsbar-->
+		
 			
-			
-			
-			<div id="container">
+			<div id="container" automatic="2000">
 			
 				<div class="progress"></div>
 				
@@ -120,6 +117,8 @@
 				
 				<div id="relative">
 					<ul>
+						<li class="play"><a href="#"><img src="./images/btn-play.png" alt="Play"/><p>PLAY</p></a></li>
+						<li class="pause"><a href="#"><img src="./images/btn-pause.png" alt="Pause"/><p>PAUSE</p></a></li>
 						<li class="prev"><a href="#"><img src="./images/btn-prev.png" alt="Previous"/><p>PREV</p></a></li>
 						<li class="next"><a href="#"><img src="./images/btn-next.png" alt="Next"/><p>NEXT</p></a></li>
 					</ul>
@@ -144,7 +143,7 @@
 	<script type="text/javascript" src="jquery.animate-enhanced.js"></script>
 	
 	
-	<script type="text/javascript" src="showtell-core.js"></script>
+	<script type="text/javascript" src="cnsconline-core.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){showtell.init($('#container'))} );
 		
