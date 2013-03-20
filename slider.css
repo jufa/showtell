@@ -1,0 +1,56 @@
+#wrapper {
+	min-height:320px;
+}
+
+#wrapper #container {
+	min-height: 320px;
+}
+/*
+ *
+ * section title, aka tag
+ *
+ *
+ */	
+#wrapper .tag {
+	margin:0 8px 0 0;
+	padding:8px 0 0 0;
+	height: 100px;
+	width: 100%;
+	}
+#wrapper .tag img {
+	float:left;
+	height:160px;
+	width:100px;
+	background-color:#33f;
+	margin-right:20px;
+}
+#wrapper .tag h2{
+	font-size:26px;
+	padding:0;
+	margin:0 0 8px 0;
+	line-height:1em;
+}
+
+#wrapper .tag h3{
+	font-size:40px;
+	padding:0;
+	margin:0;
+	line-height:1em;
+}
+
+/*
+ *
+ * bottom navigation next/previous, home 
+ *
+ *
+ */
+#wrapper #navigation {
+
+	height:55px;
+	font-size:11px;
+}
+
+#wrapper #navigation img{
+	height:32px;
+	width:32px;
+}
